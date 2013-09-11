@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FileReader.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    
+    IBOutlet UITextView *myTextView;
+    FileReader *m_thousandReader;
+    FileReader *m_millionReader;
+    FileReader *m_currentReader;
+    IBOutlet UILabel *m_lblRandomLine;
+    int currentTag;
+}
+
+- (IBAction) btnRead_Clicked:(id)sender;
+
+- (IBAction) swithTo:(id)sender;
 
 @end
